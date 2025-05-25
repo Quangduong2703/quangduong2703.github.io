@@ -1,0 +1,55 @@
+/* Bỏ gạch chân liên kết "skip link" khi không focus */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+    text-decoration: none;
+  }
+  .skip-link:focus {
+    top: 0;
+  }
+  
+  /* Nhận xét phần li hiện có */
+  /*
+  li {
+    list-style: none;
+    margin: 10px;
+  }
+  */
+  
+  /* Nav block nội tuyến + chiều rộng 80% */
+  nav {
+    display: inline-block;
+    width: 80%;
+  }
+  
+  /* Ảnh trong nav rộng 10% */
+  nav img {
+    width: 10%;
+  }
+  
+  /* Lưới 2 cột khoảng 40%, căn chỉnh tốt */
+  .grid {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: space-between;
+    align-items: start;
+    row-gap: 20px;
+  }
+  
+  /* Ảnh trong .grid rộng 100% */
+  .grid img {
+    width: 100%;
+  }
+  
+  /* Flexbox cho lớp flex */
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
