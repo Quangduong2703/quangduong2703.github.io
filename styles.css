@@ -1,55 +1,70 @@
-/* Bỏ gạch chân liên kết "skip link" khi không focus */
+/* 1. Skip link */
 .skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: #000;
-    color: #fff;
-    padding: 8px;
-    z-index: 100;
-    text-decoration: none;
-  }
-  .skip-link:focus {
-    top: 0;
-  }
-  
-  /* Nhận xét phần li hiện có */
-  /*
-  li {
-    list-style: none;
-    margin: 10px;
-  }
-  */
-  
-  /* Nav block nội tuyến + chiều rộng 80% */
-  nav {
-    display: inline-block;
-    width: 80%;
-  }
-  
-  /* Ảnh trong nav rộng 10% */
-  nav img {
-    width: 10%;
-  }
-  
-  /* Lưới 2 cột khoảng 40%, căn chỉnh tốt */
-  .grid {
-    display: grid;
-    grid-template-columns: 40% 40%;
-    justify-content: space-between;
-    align-items: start;
-    row-gap: 20px;
-  }
-  
-  /* Ảnh trong .grid rộng 100% */
-  .grid img {
-    width: 100%;
-  }
-  
-  /* Flexbox cho lớp flex */
-  .flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
-  
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* 2. Navigation with Flex */
+nav {
+  background: #333;
+  padding: 10px;
+}
+.nav {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  justify-content: center;
+}
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* 3. Grid layout */
+.grid-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* 4. Image styling with box model */
+.grid-gallery img,
+.flex-gallery img {
+  border: 3px solid #999;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+/* 5. nth-child styling */
+.grid-gallery img:nth-child(even) {
+  border-radius: 50%;
+}
+
+/* 6. Hover effect */
+.grid-gallery img:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
+
+/* 7. Flex layout */
+.flex-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
